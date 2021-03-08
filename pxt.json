@@ -1,0 +1,14 @@
+{
+    "name": "mbitbot_airbox",
+    "version": "1.0",
+    "description": "micro:bit AirBox",
+    "license": "MIT",
+    "dependencies": {
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/mbitbot_airbox-strings.json"
+    ],
+    "public": true
+}

@@ -1,0 +1,15 @@
+{
+    "mbitbot_airbox|block": "MbitBot空氣小屋",
+    "mbitbot_airbox.get_pms3003|block": "PMS3003 連接腳位 RX %choose1 TX %choose2 讀取資料",
+    "mbitbot_airbox.data_pms3003|block": "取得 PMS3003 %choose 資料",
+    "DHTState.temp|block": "溫度",
+    "DHTState.humid|block": "濕度",
+    "mbitbot_airbox.dht11|block": "DHT11溫溼度模組 %p 讀取 %s",
+    "mbitbot_airbox.oled_init|block": "OLED顯示器初始化",
+    "mbitbot_airbox.oled_showString|block": "OLED 顯示位子 x: %x |y: %y|文字: %s",
+    "mbitbot_airbox.oled_showNumber|block": "OLED 顯示位子 x: %x |y: %y|數字: %num",
+    "OLED_Size.size1|block": "大",
+    "OLED_Size.size2|block": "小",
+    "mbitbot_airbox.oled_font_size|block": "OLED設定文字大小 %oled_size",
+    "mbitbot_airbox.oled_clear|block": "OLED清除畫面"
+}
