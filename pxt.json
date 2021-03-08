@@ -4,6 +4,8 @@
     "description": "micro:bit AirBox",
     "license": "MIT",
     "dependencies": {
+        "NeoPixel": "github:microsoft/pxt-neopixel",
+        "Logyun": "github:iCShopMgr/CIRCUS_Pi_Logyun"
     },
     "files": [
         "README.md",
