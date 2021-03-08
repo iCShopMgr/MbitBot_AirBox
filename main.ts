@@ -44,6 +44,7 @@ let pmat100 = 0
 function PMS5003(choose1: number, choose2: number): void {
     serial.redirect(pms_serial_list[choose1], pms_serial_list[choose2] ,BaudRate.BaudRate9600);
     basic.pause(300);
+	pins.digitalWritePin(pms_serial_list[choose2], 1);
     let check = -1;
     let Head;
 
@@ -225,7 +226,7 @@ function draw() {
 /*
  * MbitBot AirBox
  */
-//% weight=0 color=#0000ff icon="\uf185" block="MbitBot AirBox"
+//% weight=0 color=#fa304f icon="\uf185" block="MbitBot AirBox"
 namespace mbitbot_airbox {
 	  //% blockId="get_pms3003" block="PMS3003 connect RX %choose1 TX %choose2 read data"
     //% weight=10
