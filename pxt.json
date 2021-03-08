@@ -1,7 +1,7 @@
 {
     "name": "mbitbot_airbox",
     "version": "1.0",
-    "description": "micro:bit AirBox",
+    "description": "microbit AirBox",
     "license": "MIT",
     "dependencies": {
         "NeoPixel": "github:microsoft/pxt-neopixel",
