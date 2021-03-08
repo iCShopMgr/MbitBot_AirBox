@@ -36,7 +36,7 @@ enum DHTState {
 let buf = pins.createBuffer(2)
 let read1, read2, read3
 let pms_serial_list = [SerialPin.P0, SerialPin.P1, SerialPin.P2, SerialPin.P8, SerialPin.P13, SerialPin.P14, SerialPin.P15, SerialPin.P16]
-
+let pms_digital_list = [DigitalPin.P0, DigitalPin.P1, DigitalPin.P2, DigitalPin.P8, DigitalPin.P13, DigitalPin.P14, DigitalPin.P15, DigitalPin.P16]
 let pmat10 = 0
 let pmat25 = 0
 let pmat100 = 0
@@ -44,7 +44,7 @@ let pmat100 = 0
 function PMS5003(choose1: number, choose2: number): void {
     serial.redirect(pms_serial_list[choose1], pms_serial_list[choose2] ,BaudRate.BaudRate9600);
     basic.pause(300);
-	pins.digitalWritePin(pms_serial_list[choose2], 1);
+	pins.digitalWritePin(pms_digital_list[choose2], 1);
     let check = -1;
     let Head;
 
