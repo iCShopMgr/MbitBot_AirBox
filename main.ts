@@ -42,7 +42,7 @@ let pmat25 = 0
 let pmat100 = 0
 
 function PMS5003(choose1: number, choose2: number): void {
-    serial.redirect(serial_list[choose1], serial_list[choose2] ,BaudRate.BaudRate9600);
+    serial.redirect(pms_serial_list[choose1], pms_serial_list[choose2] ,BaudRate.BaudRate9600);
     basic.pause(300);
     let check = -1;
     let Head;
