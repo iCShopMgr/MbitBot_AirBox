@@ -1,5 +1,6 @@
 {
     "mbitbot_airbox|block": "MbitBot空氣小屋",
+    "mbitbot_airbox.PMS3003_SET|block": "PMS3003 連接腳位 RX %choose1 TX %choose2 |休眠模式設定 %ch",
     "mbitbot_airbox.get_pms3003|block": "PMS3003 連接腳位 RX %choose1 TX %choose2 讀取資料",
     "mbitbot_airbox.data_pms3003|block": "取得 PMS3003 %choose 資料",
     "DHTState.temp|block": "溫度",
