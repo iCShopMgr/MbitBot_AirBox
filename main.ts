@@ -51,10 +51,10 @@ let pmat100 = 0
 
 function PMS5003SET(choose1: number, choose2: number, set_mode: number): void {
 	if(set_mode == 1) {
-		pins.digitalWritePin(pms_digital_list[choose2], 0)
+		pins.digitalWritePin(pms_digital_list[choose1], 0)
 	}
 	else {
-		pins.digitalWritePin(pms_digital_list[choose2], 1)
+		pins.digitalWritePin(pms_digital_list[choose1], 1)
 	}
 }
 
