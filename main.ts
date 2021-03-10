@@ -61,7 +61,6 @@ function PMS5003SET(choose1: number, choose2: number, set_mode: number): void {
 function PMS5003(choose1: number, choose2: number): void {
     serial.redirect(pms_serial_list[choose1], pms_serial_list[choose2] ,BaudRate.BaudRate9600);
     basic.pause(300);
-	pins.digitalWritePin(pms_digital_list[choose2], 1);
     let check = -1;
     let Head;
 
