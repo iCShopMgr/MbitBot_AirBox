@@ -33,6 +33,13 @@ enum DHTState {
     humid = 2
 }
 
+enum setMode {
+    //% block="ON"
+    setmode1 = 1,
+    //% block="OFF"
+    setmode2 = 2
+}
+
 let buf = pins.createBuffer(2)
 let read1, read2, read3
 let pms_serial_list = [SerialPin.P0, SerialPin.P1, SerialPin.P2, SerialPin.P8, SerialPin.P13, SerialPin.P14, SerialPin.P15, SerialPin.P16]
@@ -40,6 +47,16 @@ let pms_digital_list = [DigitalPin.P0, DigitalPin.P1, DigitalPin.P2, DigitalPin.
 let pmat10 = 0
 let pmat25 = 0
 let pmat100 = 0
+
+
+function PMS5003SET(choose1: number, choose2: number, set_mode: number): void {
+	if(set_mode == 1) {
+		pins.digitalWritePin(pms_digital_list[choose2], 0)
+	}
+	else if(apin == 2) {
+		pins.digitalWritePin(pms_digital_list[choose2], 1)
+	}
+}
 
 function PMS5003(choose1: number, choose2: number): void {
     serial.redirect(pms_serial_list[choose1], pms_serial_list[choose2] ,BaudRate.BaudRate9600);
@@ -228,7 +245,13 @@ function draw() {
  */
 //% weight=0 color=#fa304f icon="\uf185" block="MbitBot AirBox"
 namespace mbitbot_airbox {
-	  //% blockId="get_pms3003" block="PMS3003 connect RX %choose1 TX %choose2 read data"
+	//% blockId=PMS3003_SET block="PMS3003 Low Power Mode connect RX %choose1 TX %choose2 |set %ch"
+  	//% weight=10
+	export function PMS3003_SET(choose1: soft_serial, choose2: soft_serial, ch: setMode = 2): void {
+		return PMS5003SET(choose1, choose2, ch);
+	}
+	
+	//% blockId="get_pms3003" block="PMS3003 connect RX %choose1 TX %choose2 read data"
     //% weight=10
     export function get_pms3003(choose1: soft_serial, choose2: soft_serial): void {
         return PMS5003(choose1, choose2);
