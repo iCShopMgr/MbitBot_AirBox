@@ -53,7 +53,7 @@ function PMS5003SET(choose1: number, choose2: number, set_mode: number): void {
 	if(set_mode == 1) {
 		pins.digitalWritePin(pms_digital_list[choose2], 0)
 	}
-	else if(apin == 2) {
+	else {
 		pins.digitalWritePin(pms_digital_list[choose2], 1)
 	}
 }
