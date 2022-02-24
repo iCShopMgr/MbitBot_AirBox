@@ -47,6 +47,9 @@ let pms_digital_list = [DigitalPin.P0, DigitalPin.P1, DigitalPin.P2, DigitalPin.
 let pmat10 = 0
 let pmat25 = 0
 let pmat100 = 0
+let lpmat10 = 0
+let lpmat25 = 0
+let lpmat100 = 0
 
 
 function PMS5003SET(choose1: number, choose2: number, set_mode: number): void {
@@ -81,6 +84,19 @@ function PMS5003(choose1: number, choose2: number): void {
     pmat10 = 256*Head.getNumber(NumberFormat.Int8LE, check+10) + Head.getNumber(NumberFormat.Int8LE, check+11);
     pmat25 = 256*Head.getNumber(NumberFormat.Int8LE, check+12) + Head.getNumber(NumberFormat.Int8LE, check+13);
     pmat100 = 256*Head.getNumber(NumberFormat.Int8LE, check+14) + Head.getNumber(NumberFormat.Int8LE, check+15);
+	
+	if (pmat10 < 0) {
+		pmat10 = lpmat10;
+	}
+	if (pmat25 < 0) {
+		pmat25 = lpmat25;
+	}
+	if (pmat100 < 0) {
+		pmat100 = lpmat100;
+	}
+	lpmat10 = pmat10;
+	lpmat25 = pmat25;
+	lpmat100 = pmat100;
 
 }
 
