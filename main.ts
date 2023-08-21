@@ -284,6 +284,9 @@ namespace mbitbot_airbox {
         DHTpin = p;
         ReadData()
         if (s == 1) {
+	    if (DHT_Temp > 100) {
+	        DHT_Temp = 0;
+	    }
             return DHT_Temp;
         }
         else {
